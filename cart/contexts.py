@@ -1,3 +1,7 @@
+from decimal import Decimal
+from django.conf import settings
+
+
 def cart_contents(requests):
 
     cart_items = []

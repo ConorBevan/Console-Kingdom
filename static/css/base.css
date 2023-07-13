@@ -80,6 +80,12 @@ body {
     cursor: pointer;
 }
 
+.btn-outline-black {
+    background: white;
+    color: black !important;
+    border: 1px solid black;
+}
+
 /* Media Queries */
 
 /* Slightly larger container on xl screens */
