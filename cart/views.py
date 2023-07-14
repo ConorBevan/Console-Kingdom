@@ -15,28 +15,50 @@ def add_to_cart(request, item_id):
     product = Product.objects.get(pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
+    colour = None
+    if 'product_colour' in request.POST:
+        colour = request.POST['product_colour']
     cart = request.session.get('cart', {})
 
-    if item_id in list(cart.keys()):
-        cart[item_id] += quantity
+    if colour:
+        if item_id in list(cart.keys()):
+            if colour in cart[item_id]['items_by_colour'].keys():
+                cart[item_id]['items_by_colour'][colour] += quantity
+            else:
+                cart[item_id]['items_by_colour'][colour] = quantity
+        else:
+            cart[item_id] = {'items_by_colour': {colour: quantity}}
     else:
-        cart[item_id] = quantity
-        messages.success(request, f'Added {product.name} to your bag')
+        if item_id in list(cart.keys()):
+            cart[item_id] += quantity
+        else:
+            cart[item_id] = quantity
+            messages.success(request, f'Added {product.name} to your cart')
 
     request.session['cart'] = cart
     return redirect(redirect_url)
 
 
-def edit_cart_quantity(request, item_id):
+def edit_cart(request, item_id):
 
     quantity = int(request.POST.get('quantity'))
-    redirect_url = request.POST.get('redirect_url')
+    colour = None
+    if 'product_colour' in request.POST:
+        colour = request.POST['product_colour']
     cart = request.session.get('cart', {})
 
-    if quantity > 0:
-        cart[item_id] = quantity
+    if colour:
+        if quantity > 0:
+            cart[item_id]['items_by_colour'][colour] = quantity
+        else:
+            del cart[item_id]['items_by_colour'][colour]
+            if not cart[item_id]['items_by_colour']:
+                cart.pop(item_id)
     else:
-        del cart[item_id]
+        if quantity > 0:
+            cart[item_id] = quantity
+        else:
+            cart.pop(item_id)
 
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
@@ -44,10 +66,21 @@ def edit_cart_quantity(request, item_id):
 
 def delete_from_cart(request, item_id):
 
-    cart = request.session.get('cart', {})
+    try:
+        colour = None
+        if 'product_colour' in request.POST:
+            colour = request.POST['product_colour']
+        cart = request.session.get('cart', {})
 
-    if item_id in cart:
-        del cart[item_id]
+        if colour:
+            del cart[item_id]['items_by_colour'][colour]
+            if not cart[item_id]['items_by_colour']:
+                cart.pop(item_id)
+        else:
+            cart.pop(item_id)
 
-    request.session['cart'] = cart
-    return HttpResponse(status=200)
+        request.session['cart'] = cart
+        return HttpResponse(status=200)
+
+    except Exception as e:
+        return HttpResponse(status=500)
