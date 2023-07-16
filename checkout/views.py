@@ -1,10 +1,12 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.conf import settings
+
 from .forms import OrderForm
 from .models import Order, OrderLineItem
 from products.models import Product
 from cart.contexts import cart_contents
+
 import stripe
 
 
@@ -50,7 +52,7 @@ def checkout(request):
                             order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your cart wasn't found in our database. "
+                        "One of the products in your bag wasn't found in our database. "
                         "Please call us for assistance!")
                     )
                     order.delete()
@@ -64,7 +66,7 @@ def checkout(request):
     else:
         cart = request.session.get('cart', {})
         if not cart:
-            messages.error(request, "There's nothing in your cart at the moment")
+            messages.error(request, "There's nothing in your bag at the moment")
             return redirect(reverse('products'))
 
         current_cart = cart_contents(request)
@@ -88,6 +90,8 @@ def checkout(request):
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
     }
+
+    return render(request, template, context)
 
     return render(request, template, context)
 
