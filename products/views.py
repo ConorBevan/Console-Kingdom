@@ -1,11 +1,10 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from .models import Product
-
-# Create your views here.
+from .forms import ProductForm
+from django.contrib import messages
 
 
 def all_products(request):
-
     products = Product.objects.all()
 
     context = {
@@ -16,7 +15,6 @@ def all_products(request):
 
 
 def product_detail(request, product_id):
-
     product = get_object_or_404(Product, pk=product_id)
 
     context = {
@@ -24,3 +22,23 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
+
+
+def add_product(request):
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added product!')
+            return redirect(reverse('add_product'))
+        else:
+            messages.error(request, 'Failed to add product. Please ensure all fields are correct.')
+    else:
+        form = ProductForm()
+
+    template = 'products/add_product.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
