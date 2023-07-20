@@ -187,12 +187,17 @@
             </div>
         </div>
     </div>
-        <div class="row">
-			<div class="col-12 col-lg-7 text-right">
-				<a href="{% url 'products' %}" class="btn btn-black rounded-0 my-2">
-					<span class="text-uppercase">Go Back to Store</span>
-				</a>
-			</div>
-		</div>
+    <div class="row">
+        <div class="col-12 col-lg-7 text-right">
+            {% if from_user %}
+                <a href="{% url 'user' %}" class="btn btn-black rounded-0 my-2">
+                    <span class="text-uppercase">Back to Account</span>
+                </a>
+            {% else %}
+                <a href="{% url 'products' %}" class="btn btn-black rounded-0 my-2">
+                    <span class="text-uppercase">Back to Store</span>
+                </a>
+            {% endif %}
+        </div>
     </div>
 {% endblock %}

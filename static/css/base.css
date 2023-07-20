@@ -105,6 +105,12 @@ body {
     color: #aab7c4;
 }
 
+.order-history {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+
 /* Bootstrap Toasts */
 
 .message-container {
