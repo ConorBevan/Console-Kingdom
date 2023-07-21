@@ -26,6 +26,11 @@ body {
 
 .container {
     min-height: 50px;
+    color: #585B63;
+}
+
+.row {
+    color: #585B63;
 }
 
 /* CSS for the About modal button */
@@ -38,7 +43,7 @@ body {
     background-color: #E97451;
     color: white;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 15px 25px;
     font-size: 20px;
     cursor: pointer;
@@ -94,11 +99,6 @@ body {
     min-width: 260px;
 }
 
-.btn-black {
-    background: black;
-    color: white;
-}
-
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
@@ -107,14 +107,6 @@ body {
 .btn-black:focus {
     background: #222;
     color: white;
-}
-
-.text-black {
-    color: #000 !important;
-}
-
-.border-black {
-    border: 1px solid black !important;
 }
 
 .btt-button {
@@ -139,6 +131,12 @@ body {
     color: black !important;
     border: 1px solid black;
 }
+
+#cart-update-btn {
+    color: white;
+}
+
+/* My Account */
 
 #user-update-form .form-control {
     color: #000;
