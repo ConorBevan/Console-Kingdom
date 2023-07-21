@@ -14,7 +14,7 @@
 <div class="container h-100">
     <div class="row">
         <div class="col-12 col-md-6">
-            <h2 class="logo-font mb-4">Create a Product</h2>
+            <h2 class="logo-font mb-4">My Account Details</h2>
         </div>
     </div>
 
@@ -24,16 +24,16 @@
             <form class="mt-3" action="{% url 'user' %}" method="POST" id="user-update-form">
                 {% csrf_token %}
                 {{ form|crispy }}
-                <button class="btn btn-success text-uppercase float-left">Update</button>
+                <button class="btn btn-success text-uppercase float-left mb-5">Update</button>
             </form>
         </div>
         <div class="col-12 col-md-6">
-            <h5>Order History</h5>
+            <h5 style="text-decoration: underline;">Order History</h5>
             <div class="order-history table-responsive">
                 <table class="table table-sm table-borderless">
                     <thead>
-                        <tr>
-                            <th>Order Number</th>
+                        <tr style="color:#585B63;">
+                            <th>Number</th>
                             <th>Order Date</th>
                             <th>Items</th>
                             <th>Total</th>
