@@ -308,16 +308,7 @@ select option[value=""] {
 footer {
     margin-top: auto;
     font-family: 'Roboto', sans-serif;
-}
-
-.new-footer {
     background-color: #2C1D28;
-    color: #F8F8F8;
-}
-
-.copyright-footer {
-    background-color: #2C1D28;
-    color: #F8F8F8;
 }
 
 /* Media Queries */

@@ -144,32 +144,53 @@
   </script>
   {% endblock %}
 
-  <!-- Footer -->
-  <footer class="text-center text-black new-footer">
-    <div class="container pt-2">
-      <div class="mb-2">
-        <!-- Facebook -->
-        <a class="btn btn-link btn-floating btn-lg text-light m-1" href="https://www.facebook.com/" target=”_blank”
-          role="button" data-mdb-ripple-color="light"><i class="fab fa-facebook-f"></i></a>
-        <!-- Twitter -->
-        <a class="btn btn-link btn-floating btn-lg text-light m-1" href="https://twitter.com/" target=”_blank”
-          role="button" data-mdb-ripple-color="light"><i class="fab fa-twitter"></i></a>
-        <!-- Instagram -->
-        <a class="btn btn-link btn-floating btn-lg text-light m-1" href="https://www.instagram.com/" target=”_blank”
-          role="button" data-mdb-ripple-color="light"><i class="fab fa-instagram"></i></a>
-        <!-- Linkedin -->
-        <a class="btn btn-link btn-floating btn-lg text-light m-1" href="https://www.linkedin.com/" target=”_blank”
-          role="button" data-mdb-ripple-color="light"><i class="fab fa-linkedin"></i></a>
-        <!-- Github -->
-        <a class="btn btn-link btn-floating btn-lg text-light m-1" href="https://github.com/ConorBevan" target=”_blank”
-          role="button" data-mdb-ripple-color="light"><i class="fab fa-github"></i></a>
-      </div>
+  <footer>
+    <div class="container py-4 py-lg-5">
+        <div class="row justify-content-center">
+            <div class="col-sm-4 col-md-3 text-center text-lg-left d-flex flex-column item">
+                <h3 class="font-weight-bold" style="font-size: 1rem;">Console Kingdom</h3>
+                <ul class="list-inline text-yellow">
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com/" target="_blank" rel="nofollow" class="me-4 text-reset">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://twitter.com/" target="_blank" rel="nofollow" class="me-4 text-reset">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.instagram.com/" target="_blank" rel="nofollow" class="me-4 text-reset">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4 col-md-3 text-center text-lg-left d-flex flex-column item">
+                <h3 class="font-weight-bold" style="font-size: 1rem;"></i>Site Links</h3>
+                <ul class="list-unstyled">
+                    <li><a href="{% url 'home' %}" class="text-white">Home</a></li>
+                    <li><a href="{% url 'products' %}" class="text-white">Products</a></li>
+                    <li><a class="text-white" href="">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 text-center d-flex flex-column align-items-center order-first align-items-lg-start order-lg-last item social">
+                <h4 class="font-weight-bold mb-2"><strong>Newsletter</strong></h4>
+                <form class="d-flex justify-content-center flex-wrap" method="POST" action="{% url 'subscribe' %}">
+                    {% csrf_token %}
+                    <div class="my-2"><input class="form-control" name="name" placeholder="Your Name"></div>
+                    <div class="my-2"><input class="form-control" type="email" name="email" placeholder="Your Email"></div>
+                    <div class="my-2"><button class="btn btn-outline-black ml-2" type="submit">Subscribe</button></div>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <div class="text-center pt-3">
+            <p class="mb-0">Developed By <a href="https://github.com/ConorBevan" target="_blank" rel="nofollow">Conor Bevan</a> for Code Institute's Portfolio Project 5 - 2023</p>
+        </div>
     </div>
-    <!-- Copyright -->
-    <div class="text-center text-light p-3 copyright-footer">
-      © 2023 Copyright: Conor Bevan
-    </div>
-  </footer>
+</footer>
 
 </body>
 
