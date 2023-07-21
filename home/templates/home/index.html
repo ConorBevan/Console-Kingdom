@@ -5,10 +5,45 @@
 <div class="container h-100">
     <div class="row h-100">
         <div class="col-7 col-md-6 my-auto">
-            <h1 class="display-4 logo-font text-black">
-                Supplying Gamers Locally
-            </h1>
+            <div class="my-5 about-section">
+                <button id="aboutBtn">Console Kingdom - About Us</button>
+            </div>
         </div>
     </div>
 </div>
+<div id="aboutModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Welcome to Console Kingdom, Your Local Gaming Haven!</h2>
+        <p>
+            At Console Kingdom, we are passionate about gaming and dedicated 
+            to providing the best gaming console and accessories shopping experience 
+            in South Dublin. Our mission is to bring the latest gaming technology 
+            and top-quality accessories to gaming enthusiasts, hobbyists, and everyone 
+            who loves to immerse themselves in the exciting world of video games.
+        </p>
+    </div>
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+<script>
+    var modal = document.getElementById("aboutModal");
+    var btn = document.getElementById("aboutBtn");
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function () {
+        modal.style.display = "block";
+    };
+
+    span.onclick = function () {
+        modal.style.display = "none";
+    };
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    };
+</script>
 {% endblock %}
