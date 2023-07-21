@@ -7,17 +7,17 @@
 
 {% block content %}
 <div class="overlay"></div>
-<div class="container-fluid">
+<div class="container-fluid mb-5">
     <div class="row">
         <div class="col text-center mt-3">
-            <h2 class="logo-font">Products</h2>
+            <h1 class="logo-font" style="color: #585B63;">Products</h1>
             <hr class="w-50 mb-1 d-none">
         </div>
     </div>
     <div class="row">
         <div class="product-container col-10 offset-1">
             <div class="row mt-1 mb-2"></div>
-            <div class="row">
+            <div class="row mt-5">
                 {% for product in products %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <div class="card h-100 border-0">
@@ -30,27 +30,27 @@
                         <a href="{% url 'product_detail' product.id %}">
                             <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.jpeg"
                                 alt="{{ product.name }}"
-                                style="max-height: 400px; object-fit: cover; min-height: 400px;">
+                                style="max-height: 400px; object-fit: cover; min-height: 400px; background-color: white;">
                         </a>
                         {% endif %}
                         <div class="card-body pb-0">
-                            <p class="mb-0">{{ product.name }}</p>
+                            <p class="mb-0 font-weight-bold" style="color: #585B63;">{{ product.name }}</p>
                         </div>
-                        <div class="card-footer bg-white pt-0 border-0 text-left">
+                        <div class="card-footer pt-0 border-0 bg-white text-left">
                             <div class="row">
                                 <div class="col">
-                                    <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                                    <p class="lead mb-0 text-left font-weight-bold" style="color: #585B63;">${{ product.price }}</p>
                                     {% if product.rating %}
-                                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} /
+                                    <small class="text-muted"><i class="fas fa-star mr-1" style="color: green;"></i>{{ product.rating }} /
                                         5</small>
                                     {% else %}
-                                    <small class="text-muted">No Rating</small>
+                                    <small class="text-muted" style="color: #585B63;">No Rating</small>
                                     {% endif %}
                                     {% if request.user.is_superuser %}
-                                        <small class="ml-3">
-                                            <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                                            <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                                        </small>
+                                    <small class="ml-3">
+                                        <a href="{% url 'edit_product' product.id %}">Edit</a> |
+                                        <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                    </small>
                                     {% endif %}
                                 </div>
                             </div>
@@ -74,7 +74,7 @@
                 {% endif %}
                 {% if forloop.counter|divisibleby:4 %}
                 <div class="col-12 d-none d-xl-block mb-5">
-                    <hr>
+                    <hr class="d-none">
                 </div>
                 {% endif %}
                 {% endfor %}
@@ -85,16 +85,15 @@
 <div class="btt-button shadow-sm">
     <a class="btt-link d-flex h-100">
         <i class="fas fa-arrow-up text-white mx-auto my-auto"></i>
-    </a>	
+    </a>
 </div>
 {% endblock %}
-
 
 {% block postloadjs %}
 {{ block.super }}
 <script type="text/javascript">
-    $('.btt-link').click(function(e) {
-        window.scrollTo(0,0)
+    $('.btt-link').click(function (e) {
+        window.scrollTo(0, 0)
     })
 </script>
 {% endblock %}

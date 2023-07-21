@@ -13,13 +13,14 @@ body {
 .nav-back {
     background: #2C1D28;
 }
+
 .overlay {
     height: 100%;
     width: 100%;
     top: 0;
     left: 0;
     position: fixed;
-    background: #D6F3DE;
+    background: white;
     z-index: -1;
 }
 
@@ -28,12 +29,13 @@ body {
 }
 
 /* CSS for the About modal button */
+
 .about-section {
     text-align: center;
 }
 
 #aboutBtn {
-    background-color: green;
+    background-color: #E97451;
     color: white;
     border: none;
     border-radius: 10px;
@@ -59,6 +61,7 @@ body {
     margin: 10% auto;
     padding: 20px;
     max-width: 800px;
+    color: #585B63;
 }
 
 .close {
