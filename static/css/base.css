@@ -320,6 +320,11 @@ footer {
     bottom: 0;
 }
 
+body > footer {
+    position: sticky;
+    top: 100vh;
+}
+
 /* Media Queries */
 
 /* Slightly larger container on xl screens */
