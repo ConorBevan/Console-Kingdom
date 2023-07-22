@@ -12,6 +12,7 @@ body {
     background-attachment: fixed;
     font-family: 'Lilita One', cursive;
     min-height: 100vh;
+    height: calc(100vh - 164px);
     overflow-y: auto;
 }
 
