@@ -42,7 +42,6 @@
                                     <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
                                     {% if request.user.is_superuser %}
                                     <small class="ml-0">
-                                        <a class="btn btn-sm btn-success" href="{% url 'product_detail' product.id %}">Buy</a>
                                         <a class="btn btn-sm btn-warning" href="{% url 'edit_product' product.id %}">Edit</a> 
                                         <a class="btn btn-sm btn-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                                     </small>

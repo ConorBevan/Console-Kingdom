@@ -67,6 +67,10 @@ Before I wrote any code for this site, I had to pin point a simple design of wha
  
   </details>
 
+### Colours
+
+I used coolors.com to get my pallette to base my website on [view pallette here](https://coolors.co/d4c9ff-d6f3de-2c1d28-585b63-ffdea9)
+
 ## E-commerce type
 
 Console Kingdom is an online store that sells directly to customers. The functionality on this site for a regular customer is ability to make a purchase swiflty and quickly. For the owners, the goal is to archieve CRUD functionality.
