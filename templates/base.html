@@ -36,12 +36,21 @@
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="https://js.stripe.com/v3/"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
+  </script>
   <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  </script>
   {% endblock %}
 
   {% block extra_js %}
@@ -82,16 +91,16 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="user-options">
               {% if request.user.is_authenticated %}
-                  {% if request.user.is_superuser %}
-                      <a href="{% url 'add_product' %}" class="dropdown-item">Create a Product</a>
-                  {% endif %}
-                  <a href="{% url 'user' %}" class="dropdown-item">My Account</a>
-                  <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-              {% else %}
-                  <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                  <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+              {% if request.user.is_superuser %}
+              <a href="{% url 'add_product' %}" class="dropdown-item">Create a Product</a>
               {% endif %}
-          </div>
+              <a href="{% url 'user' %}" class="dropdown-item">My Account</a>
+              <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+              {% else %}
+              <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+              <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+              {% endif %}
+            </div>
           </li>
           <li class="list-inline-item">
             <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
@@ -115,21 +124,21 @@
   </nav>
 
   {% if messages %}
-    <div class="message-container">
-        {% for message in messages %}
-            {% with message.level as level %}
-                {% if level == 40 %}
-                    {% include 'includes/toasts/toast_error.html' %}
-                {% elif level == 30 %}
-                    {% include 'includes/toasts/toast_warning.html' %}
-                {% elif level == 25 %}
-                    {% include 'includes/toasts/toast_success.html' %}
-                {% else %}
-                    {% include 'includes/toasts/toast_info.html' %}
-                {% endif %}
-            {% endwith %}
-        {% endfor %}
-    </div>
+  <div class="message-container">
+    {% for message in messages %}
+    {% with message.level as level %}
+    {% if level == 40 %}
+    {% include 'includes/toasts/toast_error.html' %}
+    {% elif level == 30 %}
+    {% include 'includes/toasts/toast_warning.html' %}
+    {% elif level == 25 %}
+    {% include 'includes/toasts/toast_success.html' %}
+    {% else %}
+    {% include 'includes/toasts/toast_info.html' %}
+    {% endif %}
+    {% endwith %}
+    {% endfor %}
+  </div>
   {% endif %}
 
   {% block page_header %}
@@ -144,53 +153,95 @@
   </script>
   {% endblock %}
 
-  <footer>
-    <div class="container py-4 py-lg-5">
-        <div class="row justify-content-center">
-            <div class="col-sm-4 col-md-3 text-center text-lg-left d-flex flex-column item">
-                <h3 class="font-weight-bold" style="font-size: 1rem;">Console Kingdom</h3>
-                <ul class="list-inline text-yellow">
-                    <li class="list-inline-item">
-                        <a href="https://www.facebook.com/" target="_blank" rel="nofollow" class="me-4 text-reset">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="https://twitter.com/" target="_blank" rel="nofollow" class="me-4 text-reset">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="https://www.instagram.com/" target="_blank" rel="nofollow" class="me-4 text-reset">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-sm-4 col-md-3 text-center text-lg-left d-flex flex-column item">
-                <h3 class="font-weight-bold" style="font-size: 1rem;"></i>Site Links</h3>
-                <ul class="list-unstyled">
-                    <li><a href="{% url 'home' %}" class="text-white">Home</a></li>
-                    <li><a href="{% url 'products' %}" class="text-white">Products</a></li>
-                    <li><a class="text-white" href="">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-3 text-center d-flex flex-column align-items-center order-first align-items-lg-start order-lg-last item social">
-                <h4 class="font-weight-bold mb-2"><strong>Newsletter</strong></h4>
-                <form class="d-flex justify-content-center flex-wrap" method="POST" action="{% url 'subscribe' %}">
-                    {% csrf_token %}
-                    <div class="my-2"><input class="form-control" name="name" placeholder="Your Name"></div>
-                    <div class="my-2"><input class="form-control" type="email" name="email" placeholder="Your Email"></div>
-                    <div class="my-2"><button class="btn btn-outline-black ml-2" type="submit">Subscribe</button></div>
-                </form>
-            </div>
+
+  <footer class="text-white text-center text-lg-start" style="background-color: #23242a;">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!--Grid row-->
+      <div class="row mt-4">
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4" style="color: #D4C9FF;">Console Kingdom</h5>
+          <p style="color: white;">
+            At Console Kingdom, we are passionate about gaming and dedicated 
+            to providing the best gaming console and accessories shopping experience 
+            in South Dublin. Our mission is to bring the latest gaming technology 
+            and top-quality accessories to gaming enthusiasts, hobbyists, and everyone 
+            who loves to immerse themselves in the exciting world of video games.
+          </p>
         </div>
-        <hr>
-        <div class="text-center pt-3">
-            <p class="mb-0">Developed By <a href="https://github.com/ConorBevan" target="_blank" rel="nofollow">Conor Bevan</a> for Code Institute's Portfolio Project 5 - 2023</p>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4 pb-1" style="color: #D4C9FF;">Our Newsletter</h5>
+
+          <div class="form-outline form-white mb-4">
+            <form class="d-flex justify-content-center flex-wrap" method="POST" action="{% url 'subscribe' %}">
+              {% csrf_token %}
+              <div class="my-2"><input class="form-control" type="email" name="email" placeholder="Your Email"></div>
+              <div class="my-2"><button class="btn btn-success ml-2" type="submit">Subscribe</button></div>
+          </form>
+          <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 48.8px;"></div><div class="form-notch-trailing"></div></div></div>
+
+          <ul class="fa-ul" style="margin-left: 1.65em; color: white;">
+            <li class="mb-3">
+              <span class="fa-li"></span><span class="ms-2">Greystones, Ireland</span>
+            </li>
+            <li class="mb-3">
+              <span class="fa-li"></span><span class="ms-2">consolekingdom@gmail.com</span>
+            </li>
+            <li class="mb-3">
+              <span class="fa-li"></span><span class="ms-2">+ 01 234 567 88</span>
+            </li>
+          </ul>
         </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4" style="color: #D4C9FF;">Socials</h5>
+          <div class="mt-4">
+            <ul class="list-inline" style="color: white;">
+              <li class="list-inline-item">
+                  <a href="https://www.facebook.com/" target="_blank" rel="nofollow" class="me-4 text-reset btn-lg">
+                      <i class="fab fa-facebook-f"></i>
+                  </a>
+              </li>
+              <li class="list-inline-item">
+                  <a href="https://twitter.com/" target="_blank" rel="nofollow" class="me-4 text-reset btn-lg">
+                      <i class="fab fa-twitter"></i>
+                  </a>
+              </li>
+              <li class="list-inline-item">
+                  <a href="https://www.instagram.com/" target="_blank" rel="nofollow" class="me-4 text-reset btn-lg">
+                      <i class="fab fa-instagram"></i>
+                  </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://github.com/ConorBevan" target="_blank" rel="nofollow" class="me-4 text-reset btn-lg">
+                    <i class="fab fa-github"></i>
+                </a>
+            </li>
+          </ul>
+          </div>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
     </div>
-</footer>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: #2C1D28;">
+      © 2023 Copyright:
+      <a class="text-white" href="https://github.com/ConorBevan">Conor Bevan</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  
+</div>
+<!-- End of .container -->
 
 </body>
 

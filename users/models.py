@@ -28,7 +28,6 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
 
 
 class SubscribedUsers(models.Model):
-    name = models.CharField(max_length=100)
     email = models.EmailField(unique=True, max_length=100)
     created_date = models.DateTimeField('Date created', default=timezone.now)
 

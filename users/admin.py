@@ -3,7 +3,7 @@ from .models import SubscribedUsers
 
 
 class SubscribedUsersAdmin(admin.ModelAdmin):
-    list_display = ('email', 'name', 'created_date')
+    list_display = ('email', 'created_date')
 
 
 admin.site.register(SubscribedUsers, SubscribedUsersAdmin)

@@ -306,9 +306,14 @@ select option[value=""] {
 
 /* Footer */
 footer {
-    margin-top: auto;
-    font-family: 'Roboto', sans-serif;
+    margin-top: 100px;
+    font-family: 'Lilita One', cursive;
     background-color: #2C1D28;
+}
+
+body > footer {
+    position: sticky;
+    top: 100vh;
 }
 
 /* Media Queries */
