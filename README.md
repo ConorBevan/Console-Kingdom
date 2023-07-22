@@ -7,7 +7,7 @@ Console Kingdom is a fictional B2C e-commerce store that is designed and impleme
 Link to deployed site can be found [Here](https://console-kingdom-1-e73d5794a126.herokuapp.com/)
 
 ## Responsive Design
-![Home page]()
+![Home page](media/)
 
 ### Strategy
 * Console Kingdom is a B2C type of business. In recent times online shopping has becom e the more preffered choice of pursching goods. Console Kingdom aims to offer flexible online shopping to its customers.
@@ -41,82 +41,67 @@ Link to deployed site can be found [Here](https://console-kingdom-1-e73d5794a126
 <details>
   <summary>Click here to view Database Schema:</summary>
 
-  ![](static/images/schema.png)
+  ![]()
 
 </details>
 
 ## Design
-Before I wrote any code for this site, I had to pin point a simple design of what I wanted my site to look like by using wireframes, not only for myself but as well of communicating what I wanted to archieve to my mentor.
+Before I wrote any code for this site, I had to pin point a simple design of what I wanted my site to look like by using wireframes.
 
 <details>
   <summary>Click here to view Wireframes:</summary>
 
-  ![](static/images/Screenshot_5.jpg)
-  ![](static/images/Screenshot_3.jpg)
-  ![](static/images/Screenshot_4.jpg)
-  ![](static/images/Screenshot_6.jpg)
-  ![](static/images/Screenshot_7.jpg)
-  ![](static/images/Screenshot_8.jpg)
-  ![](static/images/Screenshot_9.jpg)
+  ![](media/)
+  ![](media/)
+  ![](media/)
+  ![](media/)
  
   </details>
 
-## Navigation
-I went on to create a flowchart to help me visualise website structure.
-<details>
-  <summary>Click here to view the navigation:</summary>
-
-  ![](static/images/navigation.png)
-
-</details>
-
 ## E-commerce type
 
-Pack and stash just to emphasisenis an online store that sells directly to customers. The functionality on this site for a regular customer is ability to make a purchase swiflty and quickly. For the owners, the goal is to archieve CRUD functionality.
+Console Kingdom is an online store that sells directly to customers. The functionality on this site for a regular customer is ability to make a purchase swiflty and quickly. For the owners, the goal is to archieve CRUD functionality.
+
 ## Marketing
-Though there are a lot of marketing techniques for businesses, Pack and Stash decided to first use the cheaper way, that is facebook to drive out content and engage with customers. Visit our facebook page [here](https://www.facebook.com/profile.php?id=100090536471512). 
+Though there are a lot of marketing techniques for businesses, Console Kingdom decided to first use, facebook to drive out content and engage with customers. Visit our facebook page [here](https://www.facebook.com/Console-Kingdom-115364421628176). 
 
 # Features
 ## Homepage
 
-To start off, clicking the pack and stash url takes you to the home page with a logo on the left, my account and shopping bag to the right, a search bar followed by a navigation menu and footer. All these appear on every page on the site. Also found on home page is  a hero image accompanied by a hero text, and a shop now button beneath it.
-### Header and navigation
+To start off, clicking the Console Kingdom url takes you to the home page with a logo on the left, my account and shopping bag to the right, followed by a navigation menu and footer. All these appear on every page on the site. Also found on home page is a hero image accompanied by a modal that describes what the business is about.
 
-![header](static/images/Screenshot_13.jpg)
+### Navbar
 
-### The home page
+![header](media/)
 
-![home](static/images/home.jpg)
+### Home Page
+
+![home](media/)
+
 ### Register/Sign up
-On the right side of the home page, for the first time user they will need to register their account to enjoy most of the site benefits such as saving their orders, commenting on blogs. When registering users are asked their username, email and password
-![register](static/images/register.jpg)
 
-### Sign in
+On the right side of the home page, for the first time user they will need to register their account to enjoy most of the site benefits such as saving their order details. When registering users are asked their username, email and password.
+
+![register](media/)
+
+### Sign In
 
 Registered users would need to sign in when they visit the site again. They will be asked to enter their username and password. The Remember me option is also available making life easier for returning users. Is users need to reset their password, a forgot password is also available.
 
-![login](static/images/login.jpg)
+![login](media/)
 
 ### Logout
-Users are able to protecting their account by logging out of the site.
+Users are able to leave their account by logging out of the site.
 
-![logout](static/images/logout.jpg)
+![logout](media/)
 
-## All products
+## All Products
 
-The first navigation link from the logo is all products. This is where you can display all products available. On this a user has a liberty to sort the products either by price or by category.
+The first navigation link from the logo is all products. This is where you can display all products available.
 
-![products](static/images/products.jpg)
-
- ### Sort by price
-
- ![logout](static/images/price.jpg)
-
- ### Sort by category
+![products](media/)
  
- ![category](static/images/category.jpg)
-
- ### Product detail and add to bag
+ ### Product Detail and Add to Cart
 
  Each product on site has a detailed information in form of a name, price,image, description and its category. The user is displayed with a quantity input box to select the quantity they need to add to the shopping bag either increasing or decreasing. They have an option to go back to products by clicking the keep shopping button.  Each time a user add a product to the bag they get a notification that alert them of that action.
 
