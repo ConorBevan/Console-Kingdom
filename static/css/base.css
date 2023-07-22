@@ -15,7 +15,7 @@ body {
     overflow-y: auto;
 }
 
-.h-100 {
+.page-height {
     height: auto !important;
 }
 
@@ -318,11 +318,6 @@ footer {
     font-family: 'Lilita One', cursive;
     background-color: #2C1D28;
     bottom: 0;
-}
-
-body > footer {
-    position: sticky;
-    top: 100vh;
 }
 
 /* Media Queries */
