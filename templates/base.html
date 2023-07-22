@@ -8,6 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="keywords" content="console kingdom, console, controller, xbox, playstation, nintendo">
   <link rel="shortcut icon" type="x-icon" href="../media/browser-icon.png">
   {% endblock %}
 
@@ -76,7 +77,7 @@
           <a class="nav-link" href="{% url 'products' %}">Products</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Newsletter</a>
+          <a class="nav-link" href="#footer-contact">Contact</a>
         </li>
       </ul>
       <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
@@ -154,12 +155,9 @@
   {% endblock %}
 
 
-  <footer class="text-white text-center text-lg-start" style="background-color: #23242a;">
-    <!-- Grid container -->
+  <footer class="text-white text-center text-lg-start" style="background-color: #23242a;" id="footer-contact">
     <div class="container p-4">
-      <!--Grid row-->
       <div class="row mt-4">
-        <!--Grid column-->
         <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
           <h5 class="text-uppercase mb-4" style="color: #D4C9FF;">Console Kingdom</h5>
           <p style="color: white;">
@@ -170,12 +168,9 @@
             who loves to immerse themselves in the exciting world of video games.
           </p>
         </div>
-        <!--Grid column-->
 
-        <!--Grid column-->
         <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
           <h5 class="text-uppercase mb-4 pb-1" style="color: #D4C9FF;">Our Newsletter</h5>
-
           <div class="form-outline form-white mb-4">
             <form class="d-flex justify-content-center flex-wrap" method="POST" action="{% url 'subscribe' %}">
               {% csrf_token %}
@@ -183,22 +178,19 @@
               <div class="my-2"><button class="btn btn-success ml-2" type="submit">Subscribe</button></div>
           </form>
           <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 48.8px;"></div><div class="form-notch-trailing"></div></div></div>
-
           <ul class="fa-ul" style="margin-left: 1.65em; color: white;">
             <li class="mb-3">
               <span class="fa-li"></span><span class="ms-2">Greystones, Ireland</span>
             </li>
             <li class="mb-3">
-              <span class="fa-li"></span><span class="ms-2">consolekingdom@gmail.com</span>
+              <span class="fa-li"></span><a href="mailto:consolekingdom@gmail.com" aria-label="send email link" class="ms-2" style="color: white;">consolekingdom@gmail.com</a></span>
             </li>
             <li class="mb-3">
               <span class="fa-li"></span><span class="ms-2">+ 01 234 567 88</span>
             </li>
           </ul>
         </div>
-        <!--Grid column-->
 
-        <!--Grid column-->
         <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
           <h5 class="text-uppercase mb-4" style="color: #D4C9FF;">Socials</h5>
           <div class="mt-4">
@@ -226,22 +218,14 @@
           </ul>
           </div>
         </div>
-        <!--Grid column-->
       </div>
-      <!--Grid row-->
     </div>
-    <!-- Grid container -->
 
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: #2C1D28;">
+    <div class="text-center p-3" style="background-color: #2C1D28; color: #D4C9FF;">
       © 2023 Copyright:
-      <a class="text-white" href="https://github.com/ConorBevan">Conor Bevan</a>
+      <a style="color: #D4C9FF;" href="https://github.com/ConorBevan">Conor Bevan</a>
     </div>
-    <!-- Copyright -->
   </footer>
-  
-</div>
-<!-- End of .container -->
 
 </body>
 
