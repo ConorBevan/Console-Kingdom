@@ -6,6 +6,8 @@ Console Kingdom is a fictional B2C e-commerce store that is designed and impleme
 
 Link to deployed site can be found [Here](https://console-kingdom-1-e73d5794a126.herokuapp.com/)
 
+![responsive](media/screenshot-4.png)
+
 ## Responsive Design
 <details>
   <h2>Responsive UI:</h2> I talk about thiis in my bug section of my readmefile
@@ -48,7 +50,7 @@ Link to deployed site can be found [Here](https://console-kingdom-1-e73d5794a126
 <details>
   <summary>Click here to view Database Schema:</summary>
 
-  ![]()
+  ![](media/screenshot-5.jpg)
 
 </details>
 
@@ -58,10 +60,10 @@ Before I wrote any code for this site, I had to pin point a simple design of wha
 <details>
   <summary>Click here to view Wireframes:</summary>
 
-  ![](media/)
-  ![](media/)
-  ![](media/)
-  ![](media/)
+  ![](media/screenshot-6.jpg)
+  ![](media/screenshot-7.jpg)
+  ![](media/screenshot-8.jpg)
+  ![](media/screenshot-9.jpg)
  
   </details>
 
@@ -79,108 +81,108 @@ To start off, clicking the Console Kingdom url takes you to the home page with a
 
 ### Navbar
 
-![header](media/)
+![header](media/screenshot-10.png)
 
 ### Home Page
 
-![home](media/)
+![home](media/screenshot-1.png)
 
 ### Register/Sign up
 
 On the right side of the home page, for the first time user they will need to register their account to enjoy most of the site benefits such as saving their order details. When registering users are asked their username, email and password.
 
-![register](media/)
+![register](media/screenshot-11.png)
 
 ### Sign In
 
 Registered users would need to sign in when they visit the site again. They will be asked to enter their username and password. The Remember me option is also available making life easier for returning users. Is users need to reset their password, a forgot password is also available.
 
-![login](media/)
+![login](media/screenshot-12.png)
 
 ### Logout
 Users are able to leave their account by logging out of the site.
 
-![logout](media/)
+![logout](media/screenshot-13.png)
 
 ## All Products
 
 The first navigation link from the logo is all products. This is where you can display all products available.
 
-![products](media/)
+![products](media/screenshot-29.png)
  
  ### Product Detail and Add to Cart
 
  Each product on site has a detailed information in form of a name, price,image, description. The user is displayed with a quantity input box to select the quantity they need to add to the shopping bag either increasing or decreasing. They have an option to go back to products by clicking the keep shopping button. Each time a user add a product to the bag they get a notification that alert them of that action.
 
- ![detail](media/)
+ ![detail](media/screenshot-30.png)
 
- ![add to bag](media/)
+ ![add to bag](media/screenshot-16.png)
 
  ### The Shopping Bag
 
  Consists of the price, quantity of each item and sub total. User has an option to update their bag and or remove some items from bag. They can easily go back to products by clicking keep shopping or go to checkout.
 
-![bag](media/)
+![bag](media/screenshot-17.png)
 
 ### Checkout
 
 On the left side of the checkout is where user puts their information, and on the right side is a summary of their order that is the total, the delivery.
 
-![checkout](media/)
+![checkout](media/screenshot-18.png)
 
 ### Checkout Success
 
 After completing an order, users receive an order confirmation with their details including order number.
 
-![order confirm](media/)
+![order confirm](media/screenshot-19.png)
 
-### Product detail- Super User
+### Product Detail- Super User
 
 If the user is the super user, they have an option to either delete or edit their product
 
-![detail](media/)
+![detail](media/screenshot-15.png)
 
 ### Add Product
 
 Only super users are authorized to add products to products catalogue
 
-![add product](media/)
+![add product](media/screenshot-20.png)
 
 ### Edit Product
 
 Super users only can edit the product by editing either name, description, price and update image. 
 
-![edit](media/)
+![edit](media/screenshot-21.png)
 
-### Delete product
+### Delete Product
 
 Super users only can as well delete the products from the site
 
-![delete](media/)
+![delete](media/screenshot-22.png)
 
 # Footer
 
 The footer appears on all pages of the site, it contains the newsletter sign up, about us, and social links
 
-![footer](media/)
+![footer](media/screenshot-23.png)
 
 ## About Us Modal
 
 About us modal describes in brief what the site is all about to the users.
 
-![about](media/)
+![about](media/screenshot-24.png)
 
-# My Profile
+# My Account
 
-The my profile page displays a user's saved contact infomation and their order history
+The my account page displays a user's saved contact infomation and their order history
 
-![profile](media/)
+![profile](media/screenshot-25.png)
 
 # 404 page
 
 A 404 page is also available to handle navigation errors with a home link button to take them back to the home page
 
-![error handling](media/)
+![error handling](media/screenshot-26.png)
 
 ### Future features
 
@@ -196,13 +198,13 @@ Each user that signs up is added to the newsletter list.
 
 SEO keywords
 
-![seo](media/)
+![seo](media/screenshot-27.png)
 
 ## Social media marketing
 
 A facebook page was created to build community from the target market. Facebook is free and it also takes little to no time to set up and also it has so many users whom a business can strive to maintain a certain relationship, create content and connect with a target audience.
 
-![facebook](media/)
+![facebook](media/screenshot-28.png)
 
 ## Technologies
 
@@ -266,23 +268,9 @@ A facebook page was created to build community from the target market. Facebook 
 | Logout | message shown | Logging out message shown |  Pass |
 
 ## User story testing
-### Admin
-* As a admin I can manage users' accounts so that I can make any required changes to them if needed
-   > Admin can manage user accounts from admin panels
-* As a admin I can manage products so that I can add , update or delete products when necessary
-   > Admin can add, delete and update products on the site
-* As a admin I can view created orders so that I can full fill the orders or amend if needed
-   > Admin can view orders in admin panel
-* As a Admin I can delete any of comments so that I can remove them if I nolonger feel they are still necessary or needed
-   > Only admin can delete comments 
-* As a Admin I can view messages sent via contact form so that I can act upon them
-   > Admin can view send messages in the admin panel
-* As an admin I can manage the blog content so that I can make amendments if needed
-   > Admin can add, edit or delete blogs via blog management. only accessible to admin
 
-## User Story Testing
+### User + Admin
 
-### User
 * As a site user I can login and out of my account so that I can update my details accordingly or view my order history
    > As a user I can get all the information about the website from the landing page 
 * As a site user I can login and out of my account so that I can update my details accordingly or view my order history
@@ -334,33 +322,37 @@ A facebook page was created to build community from the target market. Facebook 
 
 Throughout developing this site, I have been using Chrome, and chrome dev tools to help with debugging issues. Testing responsiveness was done using chrome emulated devices.
 
-## Compatibility testing
-
-Chrome emulated devices, and hardware devices iphone 13, samsung A51 and samsung tablet E were used to test compatibility
-
 ### Javascript validation
+
 I used JSlint to validate javascript found in some apps
 
-* cart app - 
+* cart app - use double quotes warning 
 
-* blog app - 
+* base.html - use double quotes warning 
 
-* base.html - 
+* checkout app - no warnings
 
-* newsletter - 
+* products app - Use double quotes warning
 
-* checkout - 
-
-* products - 
-
-* users - 
+* users app - 7 use double quotes warnings
 
 ### Python
-[ CI Python linter ](https://pep8ci.herokuapp.com/) was used to test python code
+
+[ CI Python linter ](https://pep8ci.herokuapp.com/) was used to test all my python code. Only warnings displayed now are line is too long.
+
+### HTML and CSS
+
+Formatted all html and css files and removed all commmented out code.
+
+### Lighthouse
+
+Lighthouse was used to test performance, best practices, accessibility and SEO.
+
+![lighthouse](media/screenshot-31.png)
 
 ## Bugs
 
-For this project there were so many bugs I encountered from the beginning though some were minor.
+For this project there were a few bugs I encountered.
 
 ### Bug 1
 Toasts not showing/displaying - Having all the code set up properly and checking in chrome dev tools I could see they were rendering in my template however not displaying. To fix this,I had to add a cdn which was not working rgianlly and now all toasts work as intended.
@@ -372,7 +364,7 @@ My deployed app on heroku wqs displayed as 404 error. I had added https:// in th
 Another noticeable bug was when the aaplication was in mobile the footer was covering the content. I fixed by adding a custom id and having height set as auto so fucntionalyt could resume.
 
 ### Bug 4
-My website is deployed and working but I can't load a resposive design ui picture. I did not have time to go back and fix this because I ran out of time so did it myself in google inspect and attached it under my homepage screenshot at the start of my readme.
+My website is deployed and working but I can't load a resposive design UI picture. I did not have time to go back and fix this because I had no time due to unfortunate circumstances realting to health, so did added in a google inspect and attached it under the empty responsive UI screenshot at the start of this readme.
 
 # Deployment
 
@@ -454,11 +446,13 @@ I then went to create a database to connect to the new created app.
 
 ## Credits
 
-* Code Institute Botique Ado walk through
+* Code Institute Botique Ado walk through project
 
 * [Stack overflow](https://stackoverflow.com/)
 
-Products description inspiration from
+* [Boostrap](https://getbootstrap.com/docs/4.0/getting-started/introduction/) was used for alot of my stylin
+
+Products description inspiration from:
 
 * [Currys](https://www.currys.ie/)
 

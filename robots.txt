@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /cart/
+Sitemap: https://console-kingdom-1-e73d5794a126.herokuapp.com/sitemap.xml
