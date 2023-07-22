@@ -1,0 +1,1 @@
+web: gunicorn console_kingdom.wsgi:application
