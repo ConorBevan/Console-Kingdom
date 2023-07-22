@@ -7,7 +7,14 @@ Console Kingdom is a fictional B2C e-commerce store that is designed and impleme
 Link to deployed site can be found [Here](https://console-kingdom-1-e73d5794a126.herokuapp.com/)
 
 ## Responsive Design
-![Home page](media/)
+<details>
+  <h2>Responsive UI:</h2> I talk about thiis in my bug section of my readmefile
+
+  ![](media/screenshot-1.png)
+  ![](media/screenshot-2.png)
+  ![](media/screenshot-3.png)
+
+</details>
 
 ### Strategy
 * Console Kingdom is a B2C type of business. In recent times online shopping has becom e the more preffered choice of pursching goods. Console Kingdom aims to offer flexible online shopping to its customers.
@@ -363,6 +370,9 @@ My deployed app on heroku wqs displayed as 404 error. I had added https:// in th
 
 ### Bug 3
 Another noticeable bug was when the aaplication was in mobile the footer was covering the content. I fixed by adding a custom id and having height set as auto so fucntionalyt could resume.
+
+### Bug 4
+My website is deployed and working but I can't load a resposive design ui picture. I did not have time to go back and fix this because I ran out of time so did it myself in google inspect and attached it under my homepage screenshot at the start of my readme.
 
 # Deployment
 
