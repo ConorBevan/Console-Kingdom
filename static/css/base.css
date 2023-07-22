@@ -378,4 +378,8 @@ body > footer {
     .increment-qty, .decrement-qty {
         padding: .25rem .5rem !important;
     }
+
+    #mobile-view {
+        min-height: 200px;
+    }
 }
