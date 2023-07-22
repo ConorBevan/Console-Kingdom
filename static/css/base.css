@@ -10,9 +10,9 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    height: calc(100vh - 164px);
     font-family: 'Lilita One', cursive;
-    min-height: 100vh;
+    min-height: calc(100vh - 100px);
+    overflow-y: auto;
 }
 
 .nav-back {
@@ -313,6 +313,7 @@ footer {
     margin-top: 100px;
     font-family: 'Lilita One', cursive;
     background-color: #2C1D28;
+    bottom: 0;
 }
 
 body > footer {
