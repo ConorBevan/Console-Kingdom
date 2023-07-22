@@ -1,8 +1,12 @@
 # Console Kingdom
 
-## Introduction
+## Description 
 
 Console Kingdom is a fictional B2C e-commerce store that is designed and implemented with Python and Django, HTML, CSS and some Javascript. It specialises in selling gaming products to consumers online.
+
+If you would like to test the payment functionality please feel free to do so by entering the card details below when prompted:
+
+`Card number: 4242 4242 4242 4242  Exp: any future date eg. 04/24 CVC: any 3 digits eg 242 and thr zip 42424`
 
 Link to deployed site can be found [Here](https://console-kingdom-1-e73d5794a126.herokuapp.com/)
 
@@ -17,6 +21,17 @@ Link to deployed site can be found [Here](https://console-kingdom-1-e73d5794a126
   ![](media/screenshot-3.png)
 
 </details>
+
+## Table of Contents
+
+- [Description](#description)
+- [UX](#ux)
+- [Features](#features)
+- [Web Marketing](#web-marketing)
+- [Technologies](#technologies)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Credits](#credits)
 
 ### Strategy
 * Console Kingdom is a B2C type of business. In recent times online shopping has becom e the more preffered choice of pursching goods. Console Kingdom aims to offer flexible online shopping to its customers.
@@ -79,7 +94,7 @@ Console Kingdom is an online store that sells directly to customers. The functio
 Though there are a lot of marketing techniques for businesses, Console Kingdom decided to first use, facebook to drive out content and engage with customers. Visit our facebook page [here](https://www.facebook.com/Console-Kingdom-115364421628176). 
 
 # Features
-## Homepage
+### Homepage
 
 To start off, clicking the Console Kingdom url takes you to the home page with a logo on the left, my account and shopping bag to the right, followed by a navigation menu and footer. All these appear on every page on the site. Also found on home page is a hero image accompanied by a modal that describes what the business is about.
 
@@ -108,7 +123,7 @@ Users are able to leave their account by logging out of the site.
 
 ![logout](media/screenshot-13.png)
 
-## All Products
+### All Products
 
 The first navigation link from the logo is all products. This is where you can display all products available.
 
@@ -164,25 +179,25 @@ Super users only can as well delete the products from the site
 
 ![delete](media/screenshot-22.png)
 
-# Footer
+### Footer
 
 The footer appears on all pages of the site, it contains the newsletter sign up, about us, and social links
 
 ![footer](media/screenshot-23.png)
 
-## About Us Modal
+### About Us Modal
 
 About us modal describes in brief what the site is all about to the users.
 
 ![about](media/screenshot-24.png)
 
-# My Account
+### My Account
 
 The my account page displays a user's saved contact infomation and their order history
 
 ![profile](media/screenshot-25.png)
 
-# 404 page
+###  404 page
 
 A 404 page is also available to handle navigation errors with a home link button to take them back to the home page
 
@@ -190,7 +205,9 @@ A 404 page is also available to handle navigation errors with a home link button
 
 ### Future features
 
-* Product rating by users
+* The ability for users to login via social networks such as google or facebook
+
+* Other payment options ie. Paypal
 
 # Web marketing
 
@@ -210,7 +227,7 @@ A facebook page was created to build community from the target market. Facebook 
 
 ![facebook](media/screenshot-28.png)
 
-## Technologies
+# Technologies
 
 ### Languages
 
@@ -382,7 +399,7 @@ I developed this site on Gitpod, using git for version control. Then deployed to
 
 * Click Create App button
 
-I then went to create a database to connect to the new created app.
+* I then went to create a database to connect to the new created app.
 
 * Login to [ElephantSQL](https://www.elephantsql.com/)
 
@@ -448,7 +465,7 @@ I then went to create a database to connect to the new created app.
 * Type git clone and paste the URL copied from the GitHub page.
 * The repository clone will now be created on your machine. 
 
-## Credits
+# Credits
 
 * Code Institute Botique Ado walk through project
 
