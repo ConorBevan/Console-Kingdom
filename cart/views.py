@@ -4,12 +4,12 @@ from products.models import Product
 
 
 def view_cart(request):
-    """ A view that renders the cart contents page """
+    """ A view that shows the cart contents page """
     return render(request, 'cart/cart.html')
 
 
 def add_to_cart(request, item_id):
-
+    """ Add a product to the cart """
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
@@ -42,7 +42,7 @@ def add_to_cart(request, item_id):
 
 
 def edit_cart(request, item_id):
-
+    """Edit the quantity of a product in cart"""
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     colour = None
@@ -72,7 +72,7 @@ def edit_cart(request, item_id):
 
 
 def delete_from_cart(request, item_id):
-
+    """Delete a product fromcart"""
     try:
         product = get_object_or_404(Product, pk=item_id)
         colour = None

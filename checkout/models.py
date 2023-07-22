@@ -8,6 +8,7 @@ from users.models import UserProfile
 
 
 class Order(models.Model):
+    """A Model to store info about an order."""
     order_number = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, null=False, blank=False, editable=False)
     user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name='orders')
     full_name = models.CharField(max_length=50, null=False, blank=False)
@@ -27,9 +28,6 @@ class Order(models.Model):
     stripe_pid = models.CharField(max_length=254, null=False, blank=False, default='')
 
     def update_total(self):
-        """
-        Update grand total & delivery cost each time a line item is added.
-        """
         self.order_total = self.lineitems.aggregate(
             Sum('lineitem_total'))['lineitem_total__sum'] or 0
         if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
@@ -49,9 +47,5 @@ class OrderLineItem(models.Model):
     lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
 
     def save(self, *args, **kwargs):
-        """
-        Override the save method to set the lineitem
-        total and update the order total.
-        """
         self.lineitem_total = self.product.price * self.quantity
         super().save(*args, **kwargs)

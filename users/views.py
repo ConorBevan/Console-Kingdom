@@ -25,7 +25,7 @@ def user(request):
     context = {
         'form': form,
         'orders': orders,
-        'on_user_page': True  # need to follow toast steps to stop bag appearing when updating profile
+        'on_user_page': True
     }
 
     return render(request, template, context)

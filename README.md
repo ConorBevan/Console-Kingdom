@@ -69,7 +69,7 @@ Before I wrote any code for this site, I had to pin point a simple design of wha
 
 ### Colours
 
-I used coolors.com to get my pallette to base my website on [view pallette here](https://coolors.co/d4c9ff-d6f3de-2c1d28-585b63-ffdea9)
+I used coolors.com to get my pallette to base my website theme on [view pallette here](https://coolors.co/d4c9ff-d6f3de-2c1d28-585b63-ffdea9)
 
 ## E-commerce type
 
@@ -319,7 +319,7 @@ A facebook page was created to build community from the target market. Facebook 
 > As a user I can edit the quantity of products in my cart so that choose the amount of an item I want
 * As a user I can fill in my details in the checkout page before submitting my order
 > As a user I can complete my order so that I can purchase my chosen product
-* As a user I can register to the newsletter
+* As a user I can register to the newsletter. As a super user i can view emials subscribed to my newsletter.
 > As a user I can sign-up to a newsletter
 
 ## Functionality testing
