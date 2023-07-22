@@ -31,7 +31,6 @@
                         <div class="row">
                             <div class="col">
                                 {% include "cart/checkout-buttons.html" %}
-                                <p class="text-muted mb-5">A summary of your cart contents is below</p>
                             </div>
                         </div>
                         {% for item in cart_items %}
@@ -83,8 +82,6 @@
                                     </td>
                                     <td class="py-3 w-25">
                                         {% include "cart/quantity-form.html" %}
-                                        <a class="update-link btn btn-primary btn-sm" id="cart-update-btn"><small>Update Quantity</small></a>
-                                        <a class="remove-item btn btn-danger btn-sm text-white float-right" id="remove_{{ item.item_id }}" data-product_colour="{{ item.colour }}"><small>Delete Product</small></a>
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>

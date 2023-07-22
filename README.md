@@ -273,42 +273,55 @@ A facebook page was created to build community from the target market. Facebook 
 * As an admin I can manage the blog content so that I can make amendments if needed
    > Admin can add, edit or delete blogs via blog management. only accessible to admin
 
-## User Story testing
+## User Story Testing
 
 ### User
-* As a site user I can create or edit my account so that I can update my details accordingly
-   > A user can create an account using register and update on my profile
-* As a site user I can login in my account so that I can view my order history
-   > Logged in user can view order history if they made a purchase before
-* As a site user I can search for products so that I can find specific products
-   > I made sure users can search for what they want using search bar
-* As a site user I can sort products on criteria such as price and category so that I can I have a method of ordering the products
-   > I made products to be filtered by price or category for users to choose how they want to view
-products as I prefer
-* As a site user I can browse through products so that I can decide what I may be interested in buying
-   > I made the site such that its easy to browse through all products so they see what to order
-* As a site user I can look at product details so that I can decide if I want to purchase it
-   > Each product has a  detailed description so users understands more of it
-* As a site user I can easily add products I want to purchase to a basket so that I can decide whether to purchase or not
-   > Users can easily add products to bag
-* As a site user I can view the contents of my shopping basket so that I can be able to make any adjustments
-   > User can view bag contents by clicking the bag itself
-* As a site user I can update my bag by adding more or remove products so that I can decide on the number of products I intend to buy
-   > User can update the bag to a quantity they want or remove everything entirely
-* As a site user I can view my order summary so that I can verify it before confirming
-   > From secure checkout, users can verify their order summary before buying
-* As a site user I can checkout securely so that I can I maintain the level of trust on the site
-   > I made sure users have secure checkout when completeing a purchase
-* As a site user I can view paginated posts so that I can select which posts to view
-   > Blog posts are paginated, clear and easy to see so to select which to view
-* As a site user I can view all posts so that I can decide what I may be interested in reading
-   > Users can easily choose which one to read
-* As a site user I can comment to the blog posts so that I can express my opinion to the post
-   > I made the site such that signed in user can comment on blog posts
-* As a site user I can use the contact form so that I can contact the site owners
-  > By using the contact form, user can send messages to the site owners
-* As a site user I can sign up to newsletter so that I can keep updated on the latest news
-  > By going to sign up newsletter on the footer, users can easily sign up to receive latest news.
+* As a site user I can login and out of my account so that I can update my details accordingly or view my order history
+   > As a user I can get all the information about the website from the landing page 
+* As a site user I can login and out of my account so that I can update my details accordingly or view my order history
+> As a user I can see the landing page with information displayed on it so that I can understand what site I'm using
+* As a site user I can view all ther prodcuts on sale on the website
+> As a user I can view products on website so that I can make informed decisions
+* As a super user I can add/edit/delete prodcust from the website with no confusion
+> As a admin I can add/edit/remove products on the website so that users have a selection of products to choose from
+* As a site user I recieve feeback on all actions made on the website so I'm aware of my actions
+> As a user I receive feedback about my actions
+* As a site user I can create a profile to see my order history and edit my user details
+> As a user I can create a user profile so that I can access unrestricted content on the website
+* As a super user I can add new prodcust through the create a prodcut page or through the admin site
+> As a admin I can add new products for sale
+* As a super user I can edit current prodcuts details that are listed on the website product page
+> As a admin I can edit current products in the database
+* As a super user I can delete current prodcuts that are listed on the website product page
+> As a admin I can delete products in the database so that they no longer appear on the website to the user
+* As a user I can register for an a account
+> As a user I can create and account
+* As a user I can edit my details in the my account page
+> AAs a user I can edit my account details
+* As a user I can acces the navbar content from anywhere on the site 
+> As a user I can access the navbar so that I can navigate the site smoothly
+* As a user I can log out of my account when I choose if I n o longer want my account to be signed in 
+> As a user I can log in and out as I choose
+* As a user I know I'm logged in because on the account section I have the option to logout or view profile also the user feedback is provided when I sign in
+> As a user I can clearly see when I'm logged in
+* As a user by licking on the cart button I can clearly see what and how many of a product is in my cart along with all the prices including the total
+> As a user I can view my shopping cart
+* As a user I can add what I desire into my cart and my bag is previwed when processed
+> As a user I can add items to my cart
+* As a user I can remove what I desire from my cart by clicking the remove product button
+> As a user I can remove selected items from my cart so that I only buy the items I want
+* As a user the footer provides a newsletter signup section, a contact section and a socials link with my facebook business page attached
+> As a user I can access the footer so that I can find relevant links and information about business
+* As a user using the default stripe credit card info I can purchase my cart 
+> As a user I can pay for items in my cart
+* As a user after buying a product I'm notified the order is completed and presented with the order details page
+> As a user I can be notified when my order is completed
+* As a user I can edit the quantity of an item within the cart page
+> As a user I can edit the quantity of products in my cart so that choose the amount of an item I want
+* As a user I can fill in my details in the checkout page before submitting my order
+> As a user I can complete my order so that I can purchase my chosen product
+* As a user I can register to the newsletter
+> As a user I can sign-up to a newsletter
 
 ## Functionality testing
 
