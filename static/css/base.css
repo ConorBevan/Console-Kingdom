@@ -352,7 +352,7 @@ body > footer {
     }
 
     body {
-        height: calc(100vh - 116px);
+        height: 100vh;
     }
 
     .display-4.logo-font.text-black {
