@@ -11,40 +11,40 @@
         </div>
     </div>
 </div>
- <!-- About Us Modal  -->
+<!-- About Us Modal  -->
 <div id="aboutModal" class="modal">
     <div class="modal-content">
         <span class="close">&times;</span>
         <h2>Welcome to Console Kingdom, Your Local Gaming Haven!</h2>
         <p>
-            At Console Kingdom, we are passionate about gaming and dedicated 
-            to providing the best gaming console and accessories shopping experience 
-            in South Dublin. Our mission is to bring the latest gaming technology 
-            and top-quality accessories to gaming enthusiasts, hobbyists, and everyone 
+            At Console Kingdom, we are passionate about gaming and dedicated
+            to providing the best gaming console and accessories shopping experience
+            in South Dublin. Our mission is to bring the latest gaming technology
+            and top-quality accessories to gaming enthusiasts, hobbyists, and everyone
             who loves to immerse themselves in the exciting world of video games.
         </p>
     </div>
 </div>
 {% endblock %}
 
- <!-- User Feedback  -->
+<!-- User Feedback  -->
 {% if messages %}
-    <div class="message-container">
-        {% for message in messages %}
-            {% with message.level as level %}
-                {% if level == 40 %}
-                    {% include 'includes/toasts/toast_error.html' %}
-                {% elif level == 30 %}
-                    {% include 'includes/toasts/toast_warning.html' %}
-                {% elif level == 25 %}
-                    {% include 'includes/toasts/toast_success.html' %}
-                {% else %}
-                    {% include 'includes/toasts/toast_info.html' %}
-                {% endif %}
-            {% endwith %}
-        {% endfor %}
-    </div>
-  {% endif %}
+<div class="message-container">
+    {% for message in messages %}
+    {% with message.level as level %}
+    {% if level == 40 %}
+    {% include 'includes/toasts/toast_error.html' %}
+    {% elif level == 30 %}
+    {% include 'includes/toasts/toast_warning.html' %}
+    {% elif level == 25 %}
+    {% include 'includes/toasts/toast_success.html' %}
+    {% else %}
+    {% include 'includes/toasts/toast_info.html' %}
+    {% endif %}
+    {% endwith %}
+    {% endfor %}
+</div>
+{% endif %}
 
 {% block postloadjs %}
 <script type="text/javascript">

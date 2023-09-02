@@ -3,30 +3,30 @@
     <div class="form-group">
         <div class="input-group">
             <div class="input-group-prepend">
-                <button class="decrement-qty btn btn-sm btn-dark" 
-                    data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                <button class="decrement-qty btn btn-sm btn-dark" data-item_id="{{ item.item_id }}"
+                    id="decrement-qty_{{ item.item_id }}">
                     <span>
                         <i class="fas fa-minus fa-sm"></i>
                     </span>
                 </button>
             </div>
-            <input class="form-control form-control-sm qty_input" type="number"
-                name="quantity" value="{{ item.quantity }}" min="1" max="99"
-                data-item_id="{{ item.item_id }}"
+            <input class="form-control form-control-sm qty_input" type="number" name="quantity"
+                value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}"
                 id="id_qty_{{ item.item_id }}">
             <div class="input-group-append">
-                <button class="increment-qty btn btn-sm btn-dark"
-                    data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                <button class="increment-qty btn btn-sm btn-dark" data-item_id="{{ item.item_id }}"
+                    id="increment-qty_{{ item.item_id }}">
                     <span>
                         <i class="fas fa-plus fa-sm"></i>
                     </span>
                 </button>
             </div>
             {% if item.product.has_colours %}
-                <input type="hidden" name="product_colour" value="{{ item.colour }}">
+            <input type="hidden" name="product_colour" value="{{ item.colour }}">
             {% endif %}
         </div>
     </div>
 </form>
 <a class="update-link btn btn-primary btn-sm" id="cart-update-btn"><small>Update Quantity</small></a>
-<a class="remove-item btn btn-danger btn-sm text-white float-right" id="remove_{{ item.item_id }}" data-product_colour="{{ item.colour }}"><small>Delete Product</small></a>
+<a class="remove-item btn btn-danger btn-sm text-white float-right" id="remove_{{ item.item_id }}"
+    data-product_colour="{{ item.colour }}"><small>Delete Product</small></a>
