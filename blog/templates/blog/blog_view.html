@@ -16,5 +16,17 @@
     </div>
 </div>
 
+<div class="container">
+    <a href="{% url 'add-post' %}" class="btn btn-success mt-5 mb-3">
+        <span class="text-uppercase">+Add Post</span>
+    </a>
+    <ul>
+        {% for post in object_list %}
+        <li><a href="{% url 'blog-detail' post.pk %}">{{ post.title }}</a>, written by {{ post.author }}</li> 
+    </ul>
+</div>
+
+
+{% endfor %}
 
 {% endblock %}
