@@ -22,11 +22,9 @@
     </a>
     <ul>
         {% for post in object_list %}
-        <li><a href="{% url 'blog-detail' post.pk %}">{{ post.title }}</a>, written by {{ post.author }}</li> 
+        <li><a href="{% url 'blog-detail' post.pk %}">{{ post.title }}</a>, written by {{ post.author }}</li>
+        {% endfor %}
     </ul>
 </div>
-
-
-{% endfor %}
 
 {% endblock %}
