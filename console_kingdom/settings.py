@@ -26,8 +26,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = 'DEVELOPMENT' in os.environ
-DEBUG = True
+DEBUG = 'DEVELOPMENT' in os.environ
+#  DEBUG = True
 
 ALLOWED_HOSTS = ['console-kingdom-1-e73d5794a126.herokuapp.com', '8000-conorbevan-consolekingd-2jrbt69tjir.ws-eu105.gitpod.io', 'localhost']
 
