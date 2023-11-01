@@ -17,12 +17,24 @@
 </div>
 
 <div class="container">
-<h1>{{ post.title }}</h1>
-<h4>{{ post.author }} - {{ post.post_date }}</h4>
-<p>{{ post.content|safe }}</p>
-<a href="{% url 'blog-view' %}" class="btn btn-dark mt-5 mb-3">
-    <span class="text-uppercase">Back</span>
-</a>
+    <h1>{{ post.title }}</h1>
+    <h4>{{ post.author }} - {{ post.post_date }}</h4>
+    <p>{{ post.content|safe }}</p>
+    <hr class="mt-4">
+    <h4>Comments:<a href="{% url 'add-comment' post.pk %}" class="btn btn-sm btn-success mt-1 mb-2 ml-2">
+            <span class="text-uppercase">Add Comment</span>
+        </a></h4>
+    {% if not post.comments.all %}
+    <p>No Comments Posted Yet</p>
+    {% else %}
+    {% for comment in post.comments.all %}
+    <p class="mb-1">{{ comment.name }} - {{ comment.comment_date }} - {{ comment.body }}</p>
+    {% endfor %}
+    {% endif %}
+    <hr>
+    <a href="{% url 'blog-view' %}" class="btn btn-dark mt-5 mb-3">
+        <span class="text-uppercase">Back</span>
+    </a>
 </div>
 
 {% endblock %}

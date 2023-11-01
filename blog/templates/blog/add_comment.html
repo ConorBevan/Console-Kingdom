@@ -10,26 +10,23 @@
 <div class="container-fluid mb-5">
     <div class="row">
         <div class="col text-center mt-3">
-            <h1 class="logo-font">Edit Blog Post</h1>
+            <h1 class="logo-font">Add Comment</h1>
             <hr class="w-50 mb-1 d-none">
         </div>
     </div>
 </div>
 
-{% if user.is_authenticated and user.is_superuser %}
 <div class="container">
 <div id="page-top">
     <div class="form-group">
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form.as_p }}
-            <button class="btn btn-success">Update</button><a href="{% url 'blog-view' %}" class="btn btn-dark mb-3 mt-3 ml-1">
-                <span class="text-uppercase">Back</span></a>
+            <button class="btn btn-success">Add Comment</button>
         </form>
     </div>
 </div>
 </div>
-{% endif %}
 
 
 {% endblock %}

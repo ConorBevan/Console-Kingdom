@@ -17,7 +17,7 @@
 </div>
 
 <div class="container">
-    {% if user.is_authenticated %}
+    {% if user.is_authenticated and user.is_superuser %}
     <a href="{% url 'add-post' %}" class="btn btn-success mt-5 mb-3 ml-4">
         <span class="text-uppercase">+Add Post</span>
     </a>
@@ -25,7 +25,7 @@
     <ul>
         {% for post in object_list %}
         <li><a href="{% url 'blog-detail' post.pk %}">{{ post.title }}</a>, written by {{ post.author }}
-            {% if user.is_authenticated %}
+            {% if user.is_authenticated and user.is_superuser %}
             - <a href="{% url 'update-post' post.pk %}" class="btn btn-sm btn-warning mb-1">
                 <span class="text-uppercase">Edit</span></a><a href="{% url 'delete-post' post.pk %}"
                 class="btn btn-sm btn-danger mb-1 ml-1">

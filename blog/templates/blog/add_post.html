@@ -16,7 +16,7 @@
     </div>
 </div>
 
-{% if user.is_authenticated %}
+{% if user.is_authenticated and user.is_superuser %}
 <div class="container">
 <div id="page-top">
     <div class="form-group">
