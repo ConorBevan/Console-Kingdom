@@ -16,15 +16,16 @@
     </div>
 </div>
 
-<div class="container">
 {% if user.is_authenticated %}
+<div class="container">
 <div id="page-top">
     <div class="form-group">
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
-            {{ form.media }}
             {{ form.as_p }}
-            <button class="btn btn-success">Submit</button>
+            <button class="btn btn-success">Submit</button><a href="{% url 'blog-view' %}" class="btn btn-dark mb-3 mt-3 ml-1">
+                <span class="text-uppercase">Back</span>
+            </a>
         </form>
     </div>
 </div>

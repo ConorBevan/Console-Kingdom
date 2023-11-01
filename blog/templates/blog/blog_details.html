@@ -18,8 +18,9 @@
 
 <div class="container">
 <h1>{{ post.title }}</h1>
-<p>{{ post.content }}</p>
-<a href="{% url 'blog-view' %}" class="btn btn-dark mt-5">
+<h4>{{ post.author }} - {{ post.post_date }}</h4>
+<p>{{ post.content|safe }}</p>
+<a href="{% url 'blog-view' %}" class="btn btn-dark mt-5 mb-3">
     <span class="text-uppercase">Back</span>
 </a>
 </div>
