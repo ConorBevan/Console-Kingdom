@@ -43,6 +43,8 @@ Link to deployed site can be found [Here](https://console-kingdom-1-e73d5794a126
 * As a admin I can manage products so that I can add, update or delete products when necessary
 * As a admin I can view created orders so that I can full fill the orders or amend if needed
 * As an admin I can manage the newsletter signees
+* As an admin I can craete gaming blogs 
+
 
 ## As a site user
 * As a site user I can create or edit my account so that I can update my details accordingly
@@ -57,6 +59,10 @@ Link to deployed site can be found [Here](https://console-kingdom-1-e73d5794a126
 * As a site user I can checkout securely so that I can I maintain the level of trust on the site
 * As a site user I can use the contact details in the footer to contact the site owners
 * As a site user I can sign up to newsletter
+* As a site user I can submit a contact form
+* As a site user I view a blog  
+* As a site user I can comment on blogs 
+
 
 ## Architecture
 
@@ -66,6 +72,7 @@ Link to deployed site can be found [Here](https://console-kingdom-1-e73d5794a126
   <summary>Click here to view Database Schema:</summary>
 
   ![](media/screenshot-5.jpg)
+  ![](media/screenshot-37.jpg)
 
 </details>
 
@@ -178,6 +185,36 @@ Super users only can edit the product by editing either name, description, price
 Super users only can as well delete the products from the site
 
 ![delete](media/screenshot-22.png)
+
+### Blog Main Page
+
+Super users can only add, edit and delete blogs
+
+![blog](media/screenshot-32.png)
+
+### Add Blog Post
+
+Only super users can add posts 
+
+![blog details](media/screenshot-34.png)
+
+### Blog Deatils Page
+
+Anyone can view blog and comment on a blog made by an admin
+
+![blog details](media/screenshot-33.png)
+
+### Add Comment Page 
+
+Anyone can add a comment to a blog 
+
+![blog details](media/screenshot-35.png)
+
+### Conatct Form Page 
+
+Anyone can sumbit a conatct form  
+
+![blog details](media/screenshot-36.png)
 
 ### Footer
 
@@ -336,8 +373,14 @@ A facebook page was created to build community from the target market. Facebook 
 > As a user I can edit the quantity of products in my cart so that choose the amount of an item I want
 * As a user I can fill in my details in the checkout page before submitting my order
 > As a user I can complete my order so that I can purchase my chosen product
-* As a user I can register to the newsletter. As a super user i can view emials subscribed to my newsletter.
+* As a user I can register to the newsletter. As a super user i can view emials subscribed to my newsletter
 > As a user I can sign-up to a newsletter
+* As a user I can view a blog
+> As a user I can view blogs
+* As a user I can comment on a blog
+> As a user I can comment on any blogs
+* As a user I can submit a contact form
+> As a user I can submit a form
 
 ## Functionality testing
 
@@ -386,6 +429,9 @@ Another noticeable bug was when the aaplication was in mobile the footer was cov
 
 ### Bug 4
 My website is deployed and working but I can't load a resposive design UI picture. I did not have time to go back and fix this because I had no time due to unfortunate circumstances realting to health, so did added in a google inspect and attached it under the empty responsive UI screenshot at the start of this readme.
+
+### Bug 5
+My website is deployed and working but my database was not working so i reset it following the guides from a tutor and databse ios now working.
 
 # Deployment
 

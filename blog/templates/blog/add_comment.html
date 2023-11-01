@@ -17,15 +17,15 @@
 </div>
 
 <div class="container">
-<div id="page-top">
-    <div class="form-group">
-        <form method="POST" enctype="multipart/form-data">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button class="btn btn-success">Add Comment</button>
-        </form>
+    <div id="page-top">
+        <div class="form-group">
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="btn btn-success">Add Comment</button>
+            </form>
+        </div>
     </div>
-</div>
 </div>
 
 

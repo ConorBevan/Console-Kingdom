@@ -18,17 +18,18 @@
 
 {% if user.is_authenticated and user.is_superuser %}
 <div class="container">
-<div id="page-top">
-    <div class="form-group">
-        <form method="POST" enctype="multipart/form-data">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button class="btn btn-success">Submit</button><a href="{% url 'blog-view' %}" class="btn btn-dark mb-3 mt-3 ml-1">
-                <span class="text-uppercase">Back</span>
-            </a>
-        </form>
+    <div id="page-top">
+        <div class="form-group">
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="btn btn-success">Submit</button><a href="{% url 'blog-view' %}"
+                    class="btn btn-dark mb-3 mt-3 ml-1">
+                    <span class="text-uppercase">Back</span>
+                </a>
+            </form>
+        </div>
     </div>
-</div>
 </div>
 {% endif %}
 
